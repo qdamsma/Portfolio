@@ -1,0 +1,167 @@
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(6px); }
+}
+
+.home {
+  min-height: calc(100svh - 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 48px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding: 40px 24px;
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  max-width: 800px;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+
+  &__foto,
+  &__groet,
+  &__naam,
+  &__subtitel,
+  &__bio,
+  &__vaardigheden,
+  &__acties {
+    animation: fadeUp 0.5s ease both;
+  }
+
+  &__foto        { animation-delay: 0.05s; }
+  &__groet       { animation-delay: 0.15s; }
+  &__naam        { animation-delay: 0.25s; }
+  &__subtitel    { animation-delay: 0.35s; }
+  &__bio         { animation-delay: 0.45s; }
+  &__vaardigheden { animation-delay: 0.55s; }
+  &__acties      { animation-delay: 0.65s; }
+
+  &__foto {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    flex-shrink: 0;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+
+    @media (max-width: 640px) {
+      width: 160px;
+      height: 160px;
+    }
+  }
+
+  &__groet {
+    margin: 0 0 4px;
+  }
+
+  &__naam {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-zwaar);
+    color: var(--tekst-kop);
+    margin: 0 0 12px;
+    line-height: 1.1;
+  }
+
+  &__subtitel {
+    font-size: var(--fs-h3);
+    color: var(--accent);
+    font-weight: var(--fw-medium);
+    margin: 0 0 16px;
+  }
+
+  &__bio {
+    margin: 0 0 24px;
+    line-height: 1.6;
+    max-width: 440px;
+  }
+
+  &__vaardigheden {
+    list-style: none;
+    margin: 0 0 32px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    @media (max-width: 640px) {
+      justify-content: center;
+    }
+  }
+
+  &__tag {
+    font-size: var(--fs-klein);
+    font-weight: var(--fw-medium);
+    color: var(--accent);
+    background: var(--accent-bg);
+    border: 1px solid rgba(22, 163, 74, 0.2);
+    border-radius: 99px;
+    padding: 4px 12px;
+  }
+
+  &__acties {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    @media (max-width: 640px) {
+      justify-content: center;
+    }
+  }
+
+  &__cta {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-size: var(--fs-nav);
+    font-weight: var(--fw-medium);
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.15s, transform 0.15s;
+
+    &:hover {
+      background: #15803d;
+      transform: translateY(-2px);
+    }
+
+    &--secundair {
+      background: transparent;
+      color: var(--accent);
+      border: 1.5px solid var(--accent);
+
+      &:hover {
+        background: var(--accent-bg);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  &__scroll {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--tekst);
+    opacity: 0.4;
+    animation: bounce 1.6s ease-in-out infinite;
+
+    .material-icons { font-size: 32px; }
+  }
+}
