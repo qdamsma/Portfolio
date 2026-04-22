@@ -7,6 +7,7 @@ import OverMij from './paginas/OverMij.jsx'
 import Projecten from './paginas/Projecten.jsx'
 import Contact from './paginas/Contact.jsx'
 import Home from './paginas/Home.jsx'
+import Puzzels from './paginas/Puzzels.jsx'
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       { path: 'over-mij', element: <OverMij /> },
       { path: 'projecten', element: <Projecten /> },
       { path: 'contact', element: <Contact /> },
+      { path: 'puzzels', element: <Puzzels /> },
     ],
   },
 ])
