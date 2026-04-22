@@ -1,6 +1,7 @@
 import SlipperigePad from './SlipperigePad'
 import level1 from '../puzzels/slipperigeTrip1.js'
 import level2 from '../puzzels/slipperigeTrip2.js'
+import laytonFoto from '../assets/layton.png'
 import './PuzzelsSectie.scss'
 
 function PuzzelsSectie() {
@@ -28,6 +29,7 @@ function PuzzelsSectie() {
           </article>
         </li>
       </ol>
+      <img src={laytonFoto} alt="Professor Layton logo" className="puzzels-sectie__layton" />
     </section>
   )
 }

@@ -34,6 +34,13 @@
     }
   }
 
+  &__layton {
+    display: block;
+    width: 80px;
+    margin: 50px auto 0;
+    opacity: 0.9;
+  }
+
   &__intro {
     font-size: var(--fs-body);
     color: #8a9bb8;
