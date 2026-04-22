@@ -3,8 +3,12 @@
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: 16px 48px;
-  background: white;
+  background: rgba(249, 249, 247, 0.85);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--rand);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr auto;
@@ -66,5 +70,10 @@
     color: var(--accent);
     background: var(--accent-bg);
     font-weight: var(--fw-medium);
+  }
+
+  &--actief:nth-child(even) {
+    color: var(--accent2);
+    background: var(--accent2-bg);
   }
 }

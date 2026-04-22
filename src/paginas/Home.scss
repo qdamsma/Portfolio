@@ -9,29 +9,32 @@
 }
 
 .home {
-  min-height: calc(100svh - 64px);
+  padding: 0;
+}
+
+.home__scherm {
+  height: calc(100vh - var(--header-hoogte));
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 64px 48px;
   position: relative;
-
-  @media (max-width: 768px) {
-    padding: 40px 24px;
-  }
+  overflow: hidden;
 }
 
 .hero {
+  margin: auto;
   display: flex;
   align-items: center;
   gap: 56px;
   max-width: 800px;
+  width: 100%;
+  padding: 48px;
+  box-sizing: border-box;
 
   @media (max-width: 640px) {
     flex-direction: column;
     text-align: center;
     gap: 32px;
+    padding: 24px;
   }
 
   &__foto,
@@ -74,14 +77,17 @@
   &__naam {
     font-size: var(--fs-h1);
     font-weight: var(--fw-zwaar);
-    color: var(--tekst-kop);
     margin: 0 0 12px;
     line-height: 1.1;
+    background: linear-gradient(120deg, var(--accent) 0%, var(--accent2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   &__subtitel {
     font-size: var(--fs-h3);
-    color: var(--accent);
+    color: var(--tekst);
     font-weight: var(--fw-medium);
     margin: 0 0 16px;
   }
@@ -108,9 +114,9 @@
   &__tag {
     font-size: var(--fs-klein);
     font-weight: var(--fw-medium);
-    color: var(--accent);
-    background: var(--accent-bg);
-    border: 1px solid rgba(22, 163, 74, 0.2);
+    color: var(--accent2);
+    background: var(--accent2-bg);
+    border: 1px solid rgba(163, 118, 22, 0.25);
     border-radius: 99px;
     padding: 4px 12px;
   }
@@ -163,5 +169,106 @@
     animation: bounce 1.6s ease-in-out infinite;
 
     .material-icons { font-size: 32px; }
+  }
+}
+
+.techstack {
+  padding: 64px 48px;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) { padding: 48px 24px; }
+
+  &__titel {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-vet);
+    color: var(--tekst-kop);
+    margin: 0 0 32px;
+  }
+
+  &__rij {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @media (max-width: 480px) { grid-template-columns: 1fr; }
+  }
+
+  &__kaart {
+    background: white;
+    border: 1px solid var(--rand);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+
+  &__kaart-header {
+    background: var(--accent-bg);
+    padding: 20px 24px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(22,163,74,0.12);
+  }
+
+  &__kaart:nth-child(even) &__kaart-header {
+    background: var(--accent2-bg);
+    border-bottom-color: rgba(220,38,38,0.12);
+  }
+
+  &__icon {
+    font-size: 22px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  &__kaart:nth-child(even) &__icon { color: var(--accent2); }
+
+  &__kaart-titel {
+    font-size: var(--fs-nav);
+    font-weight: var(--fw-vet);
+    color: var(--accent);
+    margin: 0;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__kaart:nth-child(even) &__kaart-titel { color: var(--accent2); }
+
+  &__skills {
+    list-style: none;
+    margin: 0;
+    padding: 16px 24px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 16px;
+  }
+
+  &__skill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--fs-klein);
+    color: var(--tekst-kop);
+    font-weight: var(--fw-medium);
+
+    svg {
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    &-placeholder {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
   }
 }
