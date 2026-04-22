@@ -1,0 +1,80 @@
+:root {
+  --tekst: #6b7280;
+  --tekst-kop: #111827;
+  --achtergrond: #ffffff;
+  --rand: #e5e7eb;
+  --accent: #16a34a;
+  --accent-bg: rgba(22, 163, 74, 0.08);
+
+  --sans: 'Inter', system-ui, sans-serif;
+
+  --fw-normaal: 400;
+  --fw-medium: 500;
+  --fw-vet: 600;
+  --fw-zwaar: 700;
+
+  --fs-body: 17px;
+  --fs-klein: 13px;
+  --fs-bijschrift: 12px;
+  --fs-nav: 15px;
+  --fs-h3: 20px;
+  --fs-h2: 28px;
+  --fs-h1: 48px;
+
+  font: var(--fs-body)/160% var(--sans);
+
+  @media (max-width: 768px) {
+    --fs-h1: 36px;
+    --fs-h2: 22px;
+  }
+
+  @media (max-width: 480px) {
+    --fs-h1: 28px;
+    --fs-h2: 20px;
+  }
+  color: var(--tekst);
+  background: var(--achtergrond);
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  padding: 64px 48px;
+
+  @media (max-width: 768px) {
+    padding: 40px 24px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 32px 20px;
+  }
+}
+
+h1, h2, h3 {
+  font-weight: var(--fw-vet);
+  color: var(--tekst-kop);
+  margin: 0;
+  line-height: 1.15;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+p {
+  margin: 0;
+  font-size: var(--fs-body);
+}
