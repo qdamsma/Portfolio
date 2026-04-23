@@ -1,3 +1,4 @@
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import foto from '../assets/quinten.jpg'
 import './Home.scss'
@@ -5,7 +6,13 @@ import { SiReact, SiJavascript, SiHtml5, SiSass, SiNodedotjs, SiPhp, SiSymfony, 
 import { FaJava } from 'react-icons/fa'
 import { VscVscode } from 'react-icons/vsc'
 
-const vaardigheden = ['React', 'Node.js', 'JavaScript', 'PHP', 'SCSS']
+const vaardigheden = [
+  { naam: 'React', icoon: SiReact, kleur: '#61DAFB' },
+  { naam: 'Node.js', icoon: SiNodedotjs, kleur: '#339933' },
+  { naam: 'JavaScript', icoon: SiJavascript, kleur: '#F7DF1E' },
+  { naam: 'PHP', icoon: SiPhp, kleur: '#777BB4' },
+  { naam: 'SCSS', icoon: SiSass, kleur: '#CC6699' },
+]
 
 const techstack = [
   {
@@ -64,26 +71,35 @@ function Home() {
     <main className="home">
       <div className="home__scherm">
       <section className="hero" aria-labelledby="hero-naam">
-        <img src={foto} alt="Foto van Quinten" className="hero__foto" />
         <div className="hero__tekst">
-          <p className="hero__groet">Hallo, ik ben</p>
-          <h1 id="hero-naam" className="hero__naam">Quinten Damsma</h1>
-          <p className="hero__subtitel">Junior Developer</p>
+          <h1 id="hero-naam" className="hero__naam">
+            <span className="hero__naam--donker">Quinten </span>
+            <span className="hero__naam--groen">Damsma</span>
+          </h1>
+          <p className="hero__subtitel">Junior Full-stack Developer</p>
           <p className="hero__bio">
-            Full-stack developer, recent afgestudeerd aan de Hogeschool Leiden.
-            Ervaring met React, Node.js, Symfony en WordPress via stages en freelancewerk.
+            Recent afgestudeerd aan de Hogeschool Leiden. Ik bouw webapps met React, Node.js en WordPress – altijd met oog voor gebruiksvriendelijkheid en performance.
           </p>
           <ul className="hero__vaardigheden" aria-label="Vaardigheden">
-            {vaardigheden.map(v => <li key={v} className="hero__tag">{v}</li>)}
+            {vaardigheden.map(({ naam, icoon, kleur }) => (
+              <li key={naam} className="hero__tag">
+                {React.createElement(icoon, { style: { color: kleur }, 'aria-hidden': 'true' })}
+                {naam}
+              </li>
+            ))}
           </ul>
           <div className="hero__acties">
             <NavLink to="/projecten" className="hero__cta">Bekijk mijn projecten</NavLink>
             <NavLink to="/contact" className="hero__cta hero__cta--secundair">Neem contact op</NavLink>
           </div>
         </div>
+        <div className="hero__foto-wrapper">
+          <img src={foto} alt="Foto van Quinten" className="hero__foto" />
+        </div>
       </section>
       <span className="hero__scroll" aria-hidden="true">
         <span className="material-icons">expand_more</span>
+        <span className="hero__scroll-tekst">Scroll verder</span>
       </span>
       </div>
 
@@ -98,15 +114,15 @@ function Home() {
                   <h3 id={`tech-${id}`} className="techstack__kaart-titel">{titel}</h3>
                 </div>
                 <ul className="techstack__skills" aria-label={`${titel} vaardigheden`}>
-                  {skills.map(({ naam, icoon }) => {
-                    const Icoon = icoon
-                    return (
-                      <li key={naam} className="techstack__skill">
-                        {Icoon ? <Icoon aria-hidden="true" /> : <span className="techstack__skill-placeholder" aria-hidden="true" />}
-                        <span>{naam}</span>
-                      </li>
-                    )
-                  })}
+                  {skills.map(({ naam, icoon }) => (
+                    <li key={naam} className="techstack__skill">
+                      {icoon
+                        ? React.createElement(icoon, { 'aria-hidden': 'true' })
+                        : <span className="techstack__skill-placeholder" aria-hidden="true" />
+                      }
+                      <span>{naam}</span>
+                    </li>
+                  ))}
                 </ul>
               </article>
             </li>
