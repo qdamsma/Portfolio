@@ -28,8 +28,8 @@ const projecten = [
     afbeelding: dierenapp,
     alt: 'Screenshot van de dieren backend applicatie',
     beschrijving: [
-      'Een REST API gebouwd met Laravel voor een dierenverzorging applicatie. De API beheert dieren, eigenaren en afspraken met volledige CRUD-functionaliteit.',
-      'Het project maakt gebruik van Eloquent ORM voor database-interacties en volgt de MVC-architectuur van Laravel.',
+      'Een webapplicatie gebouwd met Laravel voor een dierenverzorging applicatie. Het project beheert dieren, eigenaren en afspraken met volledige CRUD-functionaliteit.',
+      'Het project maakt gebruik van Eloquent ORM voor database-interacties en volgt de MVC-architectuur van Laravel met Blade-templates.',
     ],
     stack: [
       { naam: 'Laravel', icoon: SiLaravel, kleur: '#FF2D20' },
