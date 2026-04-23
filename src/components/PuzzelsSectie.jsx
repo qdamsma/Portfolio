@@ -9,7 +9,7 @@ function PuzzelsSectie() {
     <section className="puzzels-sectie" aria-labelledby="puzzels-titel">
       <header className="puzzels-sectie__header">
         <h2 id="puzzels-titel" className="puzzels-sectie__titel">Puzzels</h2>
-        <p className="puzzels-sectie__intro">Vanaf jongs af aan hou ik van puzzels. Eén van mijn favoriete spellen op de Nintendo DS was Professor Layton, een avonturenspel vol puzzels. Hieronder heb ik een paar puzzels nagemaakt in diezelfde stijl. Kan jij ze oplossen?</p>
+        <p className="puzzels-sectie__intro">Vanaf jongs af aan hou ik van puzzels. Eén van mijn favoriete spellen op de Nintendo DS was Professor Layton, een avonturenspel met honderden puzzels. Hieronder heb ik een paar puzzels nagemaakt in diezelfde stijl. Kan jij ze oplossen?</p>
       </header>
       <ol className="puzzels-sectie__rij" aria-label="Puzzeloverzicht">
         <li>
