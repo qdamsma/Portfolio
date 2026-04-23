@@ -1,7 +1,4 @@
 .over-mij {
-  // uses global main padding: 64px 48px
-  // PuzzelsSectie's margin-inline: -48px works correctly as direct child
-
   &__inhoud {
     max-width: 1100px;
     margin: 0 auto;
@@ -15,9 +12,6 @@
     display: flex;
     align-items: center;
     gap: 60px;
-
-    // --omgekeerd: foto staat als eerste in de DOM, dus met flex row staat die links
-    // Geen row-reverse nodig — DOM-volgorde bepaalt links/rechts
 
     &--groen {
       background: var(--accent-bg);

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import './SlipperigePad.scss'
 import banaan from '../assets/banana.png'
 import spriteLeft from '../assets/sprites/sprite-left.png'
@@ -68,7 +68,7 @@ function move(grid, pos, direction) {
 };
 
 function SlipperigePad({ grid }) {
-  const start = findStart(grid);
+  const start = useMemo(() => findStart(grid), [grid]);
   const [pos, setPos] = useState(start);
   const [won, setWon] = useState(false);
   const [gereset, setGereset] = useState(false);
@@ -119,7 +119,7 @@ function SlipperigePad({ grid }) {
     const el = containerRef.current;
     el.addEventListener('keydown', onKey);
     return () => el.removeEventListener('keydown', onKey);
-  }, [pos, won]);
+  }, [pos, won, grid, start]);
 
   // Verplaatst de speler in de opgegeven richting via de knoppen
   function step(direction) {
