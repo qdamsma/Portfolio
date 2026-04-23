@@ -190,4 +190,8 @@
   font-size: var(--fs-klein);
   color: #7a6a4a;
   margin: 0;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }

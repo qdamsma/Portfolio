@@ -13,11 +13,10 @@
 }
 
 .home__scherm {
-  height: calc(100vh - var(--header-hoogte));
+  min-height: calc(100vh - var(--header-hoogte));
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
 }
 
 .hero {
@@ -203,8 +202,8 @@
   &__scroll {
     position: absolute;
     bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,6 +213,10 @@
     animation: bounce 1.6s ease-in-out infinite;
 
     .material-icons { font-size: 24px; }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   &__scroll-tekst {
@@ -257,7 +260,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 
-    @media (max-width: 480px) { grid-template-columns: 1fr; }
+    @media (max-width: 540px) { grid-template-columns: 1fr; }
   }
 
   &__kaart {

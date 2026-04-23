@@ -4,7 +4,6 @@ import './App.scss'
 const navigatie = [
   { label: 'Over mij', naar: '/over-mij' },
   { label: 'Projecten', naar: '/projecten' },
-  { label: 'Puzzels', naar: '/puzzels' },
   { label: 'Contact', naar: '/contact' },
 ]
 
