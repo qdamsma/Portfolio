@@ -127,6 +127,32 @@
     }
   }
 
+  &__github {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 24px;
+    padding: 9px 18px;
+    font-size: var(--fs-klein);
+    font-weight: var(--fw-medium);
+    color: var(--accent);
+    background: var(--accent-bg);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+    align-self: flex-start;
+
+    .material-icons {
+      font-size: 16px;
+    }
+
+    &:hover {
+      background: rgba(22, 163, 74, 0.14);
+      border-color: var(--accent);
+    }
+  }
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 28px;

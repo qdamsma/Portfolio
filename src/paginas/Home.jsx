@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import foto from '../assets/quinten.jpg'
+import foto from '../assets/Quinten.jpg'
 import './Home.scss'
 import { SiReact, SiJavascript, SiHtml5, SiSass, SiNodedotjs, SiPhp, SiSymfony, SiLaravel, SiPython, SiGit, SiGraphql, SiFigma, SiMongodb, SiMysql, SiTypescript, SiCplusplus, SiPostman, SiWordpress, SiDocker } from 'react-icons/si'
 import { FaJava } from 'react-icons/fa'
@@ -67,6 +67,8 @@ const techstack = [
 ]
 
 function Home() {
+  useEffect(() => { document.title = 'Quinten Damsma - Full-stack Developer' }, [])
+
   return (
     <main className="home">
       <div className="home__scherm">
@@ -76,9 +78,9 @@ function Home() {
             <span className="hero__naam--donker">Quinten </span>
             <span className="hero__naam--groen">Damsma</span>
           </h1>
-          <p className="hero__subtitel">Junior Full-stack Developer</p>
+          <p className="hero__subtitel">Full-stack Developer</p>
           <p className="hero__bio">
-            Recent afgestudeerd aan de Hogeschool Leiden. Ik bouw webapps met React, Node.js en WordPress – altijd met oog voor gebruiksvriendelijkheid en performance.
+            Afgestudeerd in 2026 aan de Hogeschool Leiden. Ik bouw webapps met React, Node.js, PHP en WordPress. Daarnaast hou ik van het leren van nieuwe talen en frameworks en ben ik altijd in voor iets creatiefs.
           </p>
           <ul className="hero__vaardigheden" aria-label="Vaardigheden">
             {vaardigheden.map(({ naam, icoon, kleur }) => (

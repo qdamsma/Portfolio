@@ -7,6 +7,11 @@ const navigatie = [
   { label: 'Contact', naar: '/contact' },
 ]
 
+const footerLinks = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/quinten-damsma' },
+  { label: 'GitHub', href: 'https://github.com/qdamsma' },
+]
+
 function App() {
   return (
     <>
@@ -30,6 +35,18 @@ function App() {
         </nav>
       </header>
       <Outlet />
+      <footer className="footer">
+        <span className="footer__copyright">© 2026 Quinten Damsma</span>
+        <ul className="footer__links" aria-label="Sociale links">
+          {footerLinks.map(({ label, href }) => (
+            <li key={label}>
+              <a href={href} target="_blank" rel="noopener noreferrer" className="footer__link">
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </footer>
     </>
   )
 }

@@ -1,17 +1,20 @@
-import quinten2 from '../assets/overmij/Quinten2.jpg'
-import formule1 from '../assets/overmij/formule1.jpg'
-import wenen from '../assets/overmij/Wenen(reizen).jpg'
+import { useEffect } from 'react'
+import quinten2 from '../assets/overmij/Quinten2.webp'
+import formule1 from '../assets/overmij/formule1.webp'
+import wenen from '../assets/overmij/Wenen(reizen).webp'
 import PuzzelsSectie from '../components/PuzzelsSectie'
 import './OverMij.scss'
 
 function OverMij() {
+  useEffect(() => { document.title = 'Over mij - Quinten Damsma' }, [])
+
   return (
     <main className="over-mij">
       <div className="over-mij__inhoud">
         <section className="over-mij__sectie over-mij__sectie--bg" aria-labelledby="over-mij-titel">
           <div className="over-mij__tekst">
             <h1 id="over-mij-titel">Meer over mij</h1>
-            <p>Hoi! Ik ben Quinten Damsma, een Junior Full-stack Developer uit Nederland. Afgestudeerd aan de Hogeschool Leiden, waar ik HBO-ICT heb gestudeerd.</p>
+            <p>Hoi! Ik ben Quinten Damsma, een Full-stack Developer uit Nederland. Afgestudeerd in 2026 aan de Hogeschool Leiden, waar ik HBO-ICT heb gestudeerd.</p>
             <p>Ik ben 21 jaar en ik kom uit Sassenheim. Ik ben iemand die veel hobbies onderzoekt maar mijn grootste hobbies zijn sporten als tennis, formule 1 en voetbal. Daarnaast hou ik ook veel van reizen en heb ik al een groot deel van de wereld gezien. </p>
           </div>
           <div className="over-mij__foto-wrapper">

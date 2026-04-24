@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import './Contact.scss'
 
 // E-mail gesplitst zodat scrapers het niet direct kunnen lezen
@@ -18,6 +19,8 @@ const links = [
 ]
 
 function Contact() {
+  useEffect(() => { document.title = 'Contact - Quinten Damsma' }, [])
+
   const email = `${emailGebruiker}@${emailDomein}`
 
   return (

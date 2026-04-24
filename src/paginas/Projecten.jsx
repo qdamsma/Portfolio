@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { SiLaravel, SiPhp, SiMysql, SiCplusplus, SiReact, SiTypescript, SiNodedotjs, SiExpress } from 'react-icons/si'
-import dierenapp from '../assets/projecten/backend-dierenapp.jpg'
-import cppGame from '../assets/projecten/C++game.png'
-import reactProject from '../assets/projecten/React-project.jpg'
-import nodeProject from '../assets/projecten/Nodeproject.jpg'
+import { FaJava } from 'react-icons/fa'
+import dierenapp from '../assets/projecten/backend-dierenapp.webp'
+import cppGame from '../assets/projecten/C++game.webp'
+import reactProject from '../assets/projecten/React-project.webp'
+import nodeProject from '../assets/projecten/Nodeproject.webp'
+import javaQuizbot from '../assets/projecten/JavaQuizbot.webp'
 import './Projecten.scss'
 
 const projecten = [
@@ -12,6 +14,7 @@ const projecten = [
     titel: 'Node Project',
     afbeelding: nodeProject,
     alt: 'Screenshot van het Node project',
+    github: 'https://github.com/qdamsma/Node.js',
     beschrijving: [
       'Een webapplicatie gebouwd met Node.js, gericht op het testen van verschillende gebruikerservaringen. Het project onderzoekt hoe gebruikers omgaan met navigatiepatronen zoals een bottom-navigation.',
       'De applicatie is opgezet als een prototype om UX-patronen in de praktijk te vergelijken en te evalueren.',
@@ -24,9 +27,10 @@ const projecten = [
   },
   {
     id: '02',
-    titel: 'Backend Dierenapp',
+    titel: 'Laravel Backend Dierenapp',
     afbeelding: dierenapp,
     alt: 'Screenshot van de dieren backend applicatie',
+    github: 'https://github.com/qdamsma/dieren-app',
     beschrijving: [
       'Een webapplicatie gebouwd met Laravel voor een dierenverzorging applicatie. Het project beheert dieren, eigenaren en afspraken met volledige CRUD-functionaliteit.',
       'Het project maakt gebruik van Eloquent ORM voor database-interacties en volgt de MVC-architectuur van Laravel met Blade-templates.',
@@ -42,6 +46,7 @@ const projecten = [
     titel: 'C++ Game',
     afbeelding: cppGame,
     alt: 'Screenshot van het C++ spel',
+    github: 'https://github.com/qdamsma/F1GameCpp',
     beschrijving: [
       'Een 2D game gebouwd in C++ met eigen game-logica, beweging en collision detection.',
       'Dit project heb ik gebouwd om meer te leren over object georienteerd programmeren en game development.',
@@ -55,6 +60,7 @@ const projecten = [
     titel: 'React Project',
     afbeelding: reactProject,
     alt: 'Screenshot van het React project',
+    github: 'https://github.com/qdamsma/woningzoeker',
     beschrijving: [
       'Een frontend applicatie gebouwd met React, met herbruikbare componenten en een moderne responsieve interface.',
       'Het project bevat navigatiecomponenten zoals een bottom-navigation en richt zich op een goede gebruikerservaring op zowel desktop als mobiel.',
@@ -63,9 +69,25 @@ const projecten = [
       { naam: 'React', icoon: SiReact, kleur: '#61DAFB' },
     ],
   },
+  {
+    id: '05',
+    titel: 'Java Quizbot',
+    afbeelding: javaQuizbot,
+    alt: 'Screenshot van de Minecraft Quizbot',
+    github: 'https://github.com/qdamsma/quizbot_mod',
+    beschrijving: [
+      'Een Minecraft-bot gebouwd in Java die naar spelers toe daalt. Bij interactie krijgt de speler een willekeurige quizvraag voorgeschoteld.',
+      'Dit project was een creatieve manier om Java te oefenen door dit te combineren met een spel wat ik vaak speel.',
+    ],
+    stack: [
+      { naam: 'Java', icoon: FaJava, kleur: '#ED8B00' },
+    ],
+  },
 ]
 
 function Projecten() {
+  useEffect(() => { document.title = 'Projecten - Quinten Damsma' }, [])
+
   return (
     <main className="projecten">
       <div className="projecten__inhoud">
@@ -97,6 +119,17 @@ function Projecten() {
                 {project.beschrijving.map((alinea, i) => (
                   <p key={i} className="project-kaart__tekst">{alinea}</p>
                 ))}
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-kaart__github"
+                  >
+                    <span className="material-icons" aria-hidden="true">code</span>
+                    Bekijk code
+                  </a>
+                )}
               </div>
             </article>
           ))}
