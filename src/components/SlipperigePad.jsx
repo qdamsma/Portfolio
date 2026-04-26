@@ -193,8 +193,8 @@ function SlipperigePad({ grid }) {
         <button className="puzzle__button puzzle__button--down" onPointerDown={(e) => { e.preventDefault(); step('down'); }}><span className="material-icons">arrow_downward</span></button>
       </div>
       <p className="puzzle__hint">Je kunt ook de pijltoetsen gebruiken</p>
-      {!heeftGat && <a href='https://layton.fandom.com/wiki/Puzzle:Slippery_Trip_1'>Antwoord</a>}
-      {heeftGat && <a href='https://layton.fandom.com/wiki/Puzzle:Slippery_Trip_3'>Antwoord</a>}
+      {!heeftGat && <a href='https://layton.fandom.com/wiki/Puzzle:Slippery_Trip_1' target="_blank" rel="noopener noreferrer">Antwoord</a>}
+      {heeftGat && <a href='https://layton.fandom.com/wiki/Puzzle:Slippery_Trip_3' target="_blank" rel="noopener noreferrer">Antwoord</a>}
     </div>
   )
 }
