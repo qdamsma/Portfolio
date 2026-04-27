@@ -67,7 +67,7 @@ const techstack = [
 ]
 
 function Home() {
-  useEffect(() => { document.title = 'Quinten Damsma - Full-stack Developer' }, [])
+  useEffect(() => { document.title = 'Quinten Damsma' }, [])
 
   return (
     <main className="home">
