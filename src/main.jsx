@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.scss'
 import App from './App.jsx'
+import Home from './paginas/Home.jsx'
 
-const Home = lazy(() => import('./paginas/Home.jsx'))
 const OverMij = lazy(() => import('./paginas/OverMij.jsx'))
 const Projecten = lazy(() => import('./paginas/Projecten.jsx'))
 const Contact = lazy(() => import('./paginas/Contact.jsx'))
