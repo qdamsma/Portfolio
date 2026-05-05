@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
-import foto from '../assets/Quinten.jpg'
+import foto from '../assets/Quinten.webp'
 import './Home.scss'
 import { SiReact, SiJavascript, SiHtml5, SiSass, SiNodedotjs, SiPhp, SiSymfony, SiLaravel, SiPython, SiGit, SiGraphql, SiFigma, SiMongodb, SiMysql, SiTypescript, SiCplusplus, SiPostman, SiWordpress, SiDocker } from 'react-icons/si'
 import { FaJava } from 'react-icons/fa'

@@ -1,14 +1,9 @@
-import { StrictMode, lazy } from 'react'
+import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.scss'
 import App from './App.jsx'
 import Home from './paginas/Home.jsx'
-
-const OverMij = lazy(() => import('./paginas/OverMij.jsx'))
-const Projecten = lazy(() => import('./paginas/Projecten.jsx'))
-const Contact = lazy(() => import('./paginas/Contact.jsx'))
-const NietGevonden = lazy(() => import('./paginas/NietGevonden.jsx'))
 
 const router = createBrowserRouter([
   {
@@ -16,10 +11,10 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <Home /> },
-      { path: 'over-mij', element: <OverMij /> },
-      { path: 'projecten', element: <Projecten /> },
-      { path: 'contact', element: <Contact /> },
-      { path: '*', element: <NietGevonden /> },
+      { path: 'over-mij', lazy: async () => ({ Component: (await import('./paginas/OverMij.jsx')).default }) },
+      { path: 'projecten', lazy: async () => ({ Component: (await import('./paginas/Projecten.jsx')).default }) },
+      { path: 'contact', lazy: async () => ({ Component: (await import('./paginas/Contact.jsx')).default }) },
+      { path: '*', lazy: async () => ({ Component: (await import('./paginas/NietGevonden.jsx')).default }) },
     ],
   },
 ])
