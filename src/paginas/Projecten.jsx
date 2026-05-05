@@ -17,7 +17,7 @@ const projecten = [
     alt: 'Screenshot van de Flutter F1 app',
     github: 'https://github.com/qdamsma/flutter_f1_app',
     beschrijving: [
-      'Een F1-app gebouwd in Flutter die lijkt op de officiële F1-app, maar met verbeteringen. Zo toont de beginpagina direct de aankomende races met detailpagina\'s, in plaats van nieuwskoppen.',
+      'Een F1-app gebouwd in Flutter voor een schoolvak die lijkt op de officiële F1-app, maar met verbeteringen. Zo toont de beginpagina direct de aankomende races met detailpagina\'s, in plaats van nieuwskoppen.',
       'Het meest bijzondere onderdeel is de kampioenschapsimulator. Via berekeningen krijgen alle 20 coureurs en de teams gewogen punten op basis van het kampioenschap van dat jaar. Zo kan bijvoorbeeld Verstappen in een Haas even goed presteren als Ocon in een Red Bull.',
     ],
     stack: [
