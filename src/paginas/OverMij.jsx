@@ -24,7 +24,7 @@ function OverMij() {
 
         <section className="over-mij__sectie over-mij__sectie--groen over-mij__sectie--omgekeerd" aria-labelledby="f1-titel">
           <div className="over-mij__foto-wrapper">
-            <img src={formule1} alt="Formule 1 grand prix" className="over-mij__foto over-mij__foto--f1" />
+            <img src={formule1} alt="Formule 1 grand prix" className="over-mij__foto over-mij__foto--f1" loading="lazy" />
           </div>
           <div className="over-mij__tekst">
             <h2 id="f1-titel">Sport</h2>
@@ -41,7 +41,7 @@ function OverMij() {
             <p>Mijn absolute favoriete reis tot nu toe was Japan. Een land dat werkelijk nergens anders op lijkt en dat ik met geen enkele andere bestemming kan vergelijken.</p>
           </div>
           <div className="over-mij__foto-wrapper">
-            <img src={wenen} alt="Wenen bij avond" className="over-mij__foto over-mij__foto--wenen" />
+            <img src={wenen} alt="Wenen bij avond" className="over-mij__foto over-mij__foto--wenen" loading="lazy" />
           </div>
         </section>
       </div>

@@ -119,6 +119,7 @@ function Projecten() {
                   src={project.afbeelding}
                   alt={project.alt}
                   className="project-kaart__afbeelding"
+                  loading={index === 0 ? 'eager' : 'lazy'}
                 />
               </div>
               <div className="project-kaart__inhoud">

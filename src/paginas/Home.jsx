@@ -96,7 +96,7 @@ function Home() {
           </div>
         </div>
         <div className="hero__foto-wrapper">
-          <img src={foto} alt="Foto van Quinten" className="hero__foto" />
+          <img src={foto} alt="Foto van Quinten" className="hero__foto" fetchpriority="high" />
         </div>
       </section>
       <span className="hero__scroll" aria-hidden="true">
