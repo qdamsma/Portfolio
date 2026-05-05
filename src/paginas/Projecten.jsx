@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
-import { SiLaravel, SiPhp, SiMysql, SiCplusplus, SiReact, SiTypescript, SiNodedotjs, SiExpress } from 'react-icons/si'
+import { SiLaravel, SiPhp, SiMysql, SiCplusplus, SiReact, SiTypescript, SiNodedotjs, SiExpress, SiFlutter, SiDart } from 'react-icons/si'
 import { FaJava } from 'react-icons/fa'
+import flutterF1 from '../assets/projecten/flutterf1project.webp'
 import dierenapp from '../assets/projecten/backend-dierenapp.webp'
 import cppGame from '../assets/projecten/C++game.webp'
 import reactProject from '../assets/projecten/React-project.webp'
@@ -11,6 +12,35 @@ import './Projecten.scss'
 const projecten = [
   {
     id: '01',
+    titel: 'Flutter F1 App',
+    afbeelding: flutterF1,
+    alt: 'Screenshot van de Flutter F1 app',
+    github: 'https://github.com/qdamsma/flutter_f1_app',
+    beschrijving: [
+      'Een F1-app gebouwd in Flutter die lijkt op de officiële F1-app, maar met verbeteringen. Zo toont de beginpagina direct de aankomende races met detailpagina\'s, in plaats van nieuwskoppen.',
+      'Het meest bijzondere onderdeel is de kampioenschapsimulator. Via berekeningen krijgen alle 20 coureurs en de teams gewogen punten op basis van het kampioenschap van dat jaar. Zo kan bijvoorbeeld Verstappen in een Haas even goed presteren als Ocon in een Red Bull.',
+    ],
+    stack: [
+      { naam: 'Flutter', icoon: SiFlutter, kleur: '#02569B' },
+      { naam: 'Dart', icoon: SiDart, kleur: '#0175C2' },
+    ],
+  },
+  {
+    id: '02',
+    titel: 'Java Quizbot',
+    afbeelding: javaQuizbot,
+    alt: 'Screenshot van de Minecraft Quizbot',
+    github: 'https://github.com/qdamsma/quizbot_mod',
+    beschrijving: [
+      'Een Minecraft-bot gebouwd in Java die naar spelers toe daalt. Bij interactie krijgt de speler een willekeurige quizvraag voorgeschoteld.',
+      'Dit project was een creatieve manier om Java te oefenen door dit te combineren met een spel wat ik vaak speel.',
+    ],
+    stack: [
+      { naam: 'Java', icoon: FaJava, kleur: '#ED8B00' },
+    ],
+  },
+  {
+    id: '03',
     titel: 'Node Project',
     afbeelding: nodeProject,
     alt: 'Screenshot van het Node project',
@@ -26,7 +56,7 @@ const projecten = [
     ],
   },
   {
-    id: '02',
+    id: '04',
     titel: 'Laravel Backend Dierenapp',
     afbeelding: dierenapp,
     alt: 'Screenshot van de dieren backend applicatie',
@@ -42,7 +72,7 @@ const projecten = [
     ],
   },
   {
-    id: '03',
+    id: '05',
     titel: 'C++ Game',
     afbeelding: cppGame,
     alt: 'Screenshot van het C++ spel',
@@ -56,7 +86,7 @@ const projecten = [
     ],
   },
   {
-    id: '04',
+    id: '06',
     titel: 'React Project',
     afbeelding: reactProject,
     alt: 'Screenshot van het React project',
@@ -67,20 +97,6 @@ const projecten = [
     ],
     stack: [
       { naam: 'React', icoon: SiReact, kleur: '#61DAFB' },
-    ],
-  },
-  {
-    id: '05',
-    titel: 'Java Quizbot',
-    afbeelding: javaQuizbot,
-    alt: 'Screenshot van de Minecraft Quizbot',
-    github: 'https://github.com/qdamsma/quizbot_mod',
-    beschrijving: [
-      'Een Minecraft-bot gebouwd in Java die naar spelers toe daalt. Bij interactie krijgt de speler een willekeurige quizvraag voorgeschoteld.',
-      'Dit project was een creatieve manier om Java te oefenen door dit te combineren met een spel wat ik vaak speel.',
-    ],
-    stack: [
-      { naam: 'Java', icoon: FaJava, kleur: '#ED8B00' },
     ],
   },
 ]
