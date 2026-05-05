@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import './App.scss'
 
@@ -34,7 +35,9 @@ function App() {
           </ul>
         </nav>
       </header>
-      <Outlet />
+      <Suspense fallback={null}>
+        <Outlet />
+      </Suspense>
       <footer className="footer">
         <span className="footer__copyright">© 2026 Quinten Damsma</span>
         <ul className="footer__links" aria-label="Sociale links">

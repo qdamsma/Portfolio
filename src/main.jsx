@@ -1,13 +1,14 @@
-import { StrictMode } from 'react'
+import { StrictMode, lazy } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.scss'
 import App from './App.jsx'
-import OverMij from './paginas/OverMij.jsx'
-import Projecten from './paginas/Projecten.jsx'
-import Contact from './paginas/Contact.jsx'
-import Home from './paginas/Home.jsx'
-import NietGevonden from './paginas/NietGevonden.jsx'
+
+const Home = lazy(() => import('./paginas/Home.jsx'))
+const OverMij = lazy(() => import('./paginas/OverMij.jsx'))
+const Projecten = lazy(() => import('./paginas/Projecten.jsx'))
+const Contact = lazy(() => import('./paginas/Contact.jsx'))
+const NietGevonden = lazy(() => import('./paginas/NietGevonden.jsx'))
 
 const router = createBrowserRouter([
   {
