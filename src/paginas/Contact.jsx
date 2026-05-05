@@ -19,7 +19,10 @@ const links = [
 ]
 
 function Contact() {
-  useEffect(() => { document.title = 'Contact - Quinten Damsma' }, [])
+  useEffect(() => {
+    document.title = 'Contact - Quinten Damsma'
+    document.querySelector('link[rel="canonical"]').setAttribute('href', 'https://quintendamsma.nl/contact')
+  }, [])
 
   const email = `${emailGebruiker}@${emailDomein}`
 

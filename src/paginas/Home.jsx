@@ -67,7 +67,10 @@ const techstack = [
 ]
 
 function Home() {
-  useEffect(() => { document.title = 'Quinten Damsma' }, [])
+  useEffect(() => {
+    document.title = 'Quinten Damsma'
+    document.querySelector('link[rel="canonical"]').setAttribute('href', 'https://quintendamsma.nl/')
+  }, [])
 
   return (
     <main className="home">

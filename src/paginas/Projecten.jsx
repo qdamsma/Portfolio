@@ -102,7 +102,10 @@ const projecten = [
 ]
 
 function Projecten() {
-  useEffect(() => { document.title = 'Projecten - Quinten Damsma' }, [])
+  useEffect(() => {
+    document.title = 'Projecten - Quinten Damsma'
+    document.querySelector('link[rel="canonical"]').setAttribute('href', 'https://quintendamsma.nl/projecten')
+  }, [])
 
   return (
     <main className="projecten">
@@ -120,6 +123,7 @@ function Projecten() {
                   alt={project.alt}
                   className="project-kaart__afbeelding"
                   loading={index === 0 ? 'eager' : 'lazy'}
+                  fetchpriority={index === 0 ? 'high' : 'auto'}
                 />
               </div>
               <div className="project-kaart__inhoud">
