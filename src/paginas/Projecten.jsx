@@ -123,7 +123,7 @@ function Projecten() {
                   alt={project.alt}
                   className="project-kaart__afbeelding"
                   loading={index === 0 ? 'eager' : 'lazy'}
-                  fetchpriority={index === 0 ? 'high' : 'auto'}
+                  fetchPriority={index === 0 ? 'high' : 'auto'}
                 />
               </div>
               <div className="project-kaart__inhoud">

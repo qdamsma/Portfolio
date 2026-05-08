@@ -21,7 +21,7 @@ function OverMij() {
             <p>Ik ben 21 jaar en ik kom uit Sassenheim. Ik ben iemand die veel hobbies onderzoekt maar mijn grootste hobbies zijn sporten als tennis, formule 1 en voetbal. Daarnaast hou ik ook veel van reizen en heb ik al een groot deel van de wereld gezien. </p>
           </div>
           <div className="over-mij__foto-wrapper">
-            <img src={quinten2} alt="Quinten Damsma" className="over-mij__foto over-mij__foto--quinten" fetchpriority="high" />
+            <img src={quinten2} alt="Quinten Damsma" className="over-mij__foto over-mij__foto--quinten" fetchPriority="high" />
           </div>
         </section>
 
